@@ -1,0 +1,1044 @@
+ <html>
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet"></link>
+
+        <title>Pravalika Kethadi | Salesforce Admin and Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        html {
+  scroll-behavior: smooth;
+}
+            body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sora', sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+.card,
+.experience-card,
+.project-card {
+  background: #ffffff;
+  color: #111;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: 'Sora', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.experience-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h3,
+.experience-card h3,
+.project-card h3 {
+  color: #222;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.card ul,
+.experience-card ul,
+.project-card ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.card ul li::before,
+.experience-card ul li::before,
+.project-card ul li::before {
+  content: '• ';
+  color: #6959CD;
+  font-weight: bold;
+}
+
+
+
+.landing {
+    height: 100vh;
+    background: url('https://wallpapers.com/images/hd/salesforce-background-a8mw8xjxqw8em34i.jpg') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    animation: zoomPan 20s infinite alternate ease-in-out;
+    padding: 0;               /* remove inner spacing */
+    margin: 0;
+   
+}
+ @keyframes zoomPan {
+            0% { background-size: 100%; background-position: center; }
+            50% { background-size: 110%; background-position: top; }
+            100% { background-size: 100%; background-position: bottom; }
+        }
+.landing-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    width: 100%;
+    gap: 40px;
+    position: absolute;
+    top: 0;                /* forces content to stick to top */
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+.typing-text {
+    flex: 2;
+    font-family: 'Courier New', monospace;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.8;
+    white-space: pre-line;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff inset;
+    text-shadow: 1px 1px 3px #000;
+    margin-top: 20px;
+}
+
+
+
+.robot-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    animation: bounceBot 2s infinite ease-in-out;
+}
+@keyframes bounceBot {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.typing-indicator {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+    animation: blink 1s infinite;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.robot-avatar {
+    width: 180px;
+    transition: transform 0.4s ease;
+}
+.robot-avatar:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+@keyframes floatBot {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+/* Robot waving animation */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(3deg); }
+    40% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    80% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.cta {
+    margin-top: 30px;
+    padding: 12px 28px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+}
+
+.cta:hover {
+    background-color: #D63E00;
+}
+
+.intro-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 40px 80px 80px;
+        flex-wrap: wrap;
+        gap: 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+     .profile-card {
+  background: #fff;
+  color: #000;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 320px;
+  text-align: center;
+  margin-left: -40px; /* 💥 key update: moves image left */
+  animation: floatProfile 6s ease-in-out infinite;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+@keyframes floatProfile {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+      .profile-card img {
+        width: 105%;
+        border-radius: 16px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+      }
+      .profile-card img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+      .profile-name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 16px;
+      }
+      .profile-title {
+        color: #ff4500;
+        font-weight: 600;
+        margin: 8px 0;
+      }
+      .profile-desc {
+        font-size: 14px;
+        color: #333;
+      }
+      .intro-text {
+        flex: 1;
+        max-width: 600px;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #eee;
+      }
+      .intro-text h1 {
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+      .intro-text p.highlight {
+        font-size: 18px;
+        font-weight: 600;
+        color: #aaa;
+        margin-bottom: 24px;
+      }
+      .stats {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .stat-box {
+        text-align: left;
+      }
+      .stat-box .stat-num {
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+      }
+      .stat-box .stat-label {
+        font-size: 14px;
+        color: #aaa;
+      }
+
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+.floating-agent {
+    position: absolute;
+    width: 120px;
+    top: 50px;
+    left: 20px;
+    z-index: 3;
+    animation: flyAround 18s infinite ease-in-out;
+    pointer-events: none;
+}
+
+
+
+
+/* Flying animation path */
+@keyframes flyAround {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(70vw, 10vh) rotate(12deg);
+    }
+    50% {
+        transform: translate(60vw, 60vh) rotate(-10deg);
+    }
+    75% {
+        transform: translate(20vw, 70vh) rotate(15deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+.cta#yesBtn {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    border: 2px solid #00ffff;
+    animation: glowPulse 1.8s infinite ease-in-out, bounceIn 1s ease-in-out;
+    font-size: 18px;
+    padding: 12px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    display: none;
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 10px #00ffff; }
+    50% { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
+    100% { box-shadow: 0 0 10px #00ffff; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+    animation: shimmer 12s linear infinite;
+}
+@keyframes shimmer {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
+}
+
+/* LIVE CHAT BOT: Right side, floating, glowing */
+#chatBotWrapper {
+  position: absolute;
+  bottom: 120px;
+  right: 40px;
+  text-align: center;
+  z-index: 10;
+  display: none;
+}
+
+/* Bot image */
+#chatBot {
+  width: 180px;
+  animation: floatUp 4s infinite ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#chatBot:hover {
+  transform: scale(1.1);
+}
+
+/* Hint bubble */
+#chatHint {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #00ffff;
+  margin-bottom: 12px;
+  animation: glowPulse 2s infinite;
+}
+
+/* Bubble tail */
+#chatHint::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.85) transparent transparent transparent;
+}
+
+/* Typing dots animation */
+.dot {
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  margin-right: 3px;
+  background-color: #00ffff;
+  border-radius: 50%;
+  animation: blinkDot 1.5s infinite;
+}
+
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blinkDot {
+  0%, 80%, 100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}
+
+
+            .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center; /* 👈 center everything horizontally */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+
+            .navbar .logo {
+                font-size: 24px;
+                font-weight: bold;
+                color: #6959CD;
+                justify-content: center;
+            }
+
+            .navbar .menu {
+                display: flex;
+                gap: 32px;
+            }
+
+            .navbar .menu a {
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: 500;
+                font-family: 'Sora', sans-serif;
+
+                font-size: 16px;
+                transition: color 0.3s ease;
+            }
+
+            .navbar .menu a:hover {
+                color: #6959CD;
+            }
+
+            .section {
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+          .section h2 {
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #6959CD;
+  transform: scale(1.05);
+}
+
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover .contact-icon {
+  transform: scale(1.2);
+}
+
+
+            .content-box {
+                max-width: 800px;
+                margin: 0 auto;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .hidden {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+
+            .visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+             @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .experience-card, .project-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #00ffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+  text-align: left;
+}
+
+.experience-card ul, .project-card ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: '✨ ';
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.experience-card h3, .project-card h3 {
+  color: #00ffff;
+  margin-bottom: 8px;
+}
+
+
+ @media (max-width: 768px) {
+  .landing-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .typing-text {
+    font-size: 16px;
+    padding: 16px;
+    margin-top: 20px;
+    max-width: 90vw;
+    line-height: 1.6;
+  }
+
+  .robot-container {
+    margin-top: 10px;
+    animation: none;
+  }
+
+  .robot-avatar {
+    width: 130px;
+  }
+
+  #chatBotWrapper {
+    bottom: 90px;
+    right: 20px;
+    max-width: 85%;
+  }
+
+  #chatHint {
+    font-size: 12px;
+    padding: 8px 12px;
+    line-height: 1.4;
+  }
+
+  #chatBot {
+    width: 140px;
+  }
+
+  .cta#yesBtn {
+    right: 20px;
+    bottom: 30px;
+    padding: 10px 22px;
+    font-size: 16px;
+  }
+
+  .floating-agent {
+    display: none; /* Hide flying bot for mobile */
+  }
+
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile-img {
+    width: 200px;
+    margin-top: 0;
+  }
+   .profile-right {
+    text-align: center;
+  }
+
+  .profile-text {
+    font-size: 16px;
+    max-width: 90vw;
+  }
+   .landing {
+    animation: none !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
+                </style>
+        </meta>
+    </head>
+    <body>
+    <canvas id="particles"></canvas>
+    <audio id="popSound" src="https://www.soundjay.com/buttons/sounds/button-29.mp3"></audio>
+
+
+
+   <div class="landing" id="landing">
+  <div id="chatBotWrapper">
+  <div id="chatHint">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    &nbsp; Click me to hear what makes this site special!
+  </div>
+  <img id="chatBot" src="https://developer.salesforce.com/agentforce-workshop/gfx/agents-social.png" alt="Chat Bot" />
+</div>
+
+
+
+   <img src="https://i.postimg.cc/Y0GQLKYh/Flying-Agentforce.png" 
+     class="floating-agent" 
+     alt="Agent Bot" />
+
+  <div class="landing-content">
+    
+    <!-- Left Side: Text -->
+    <div class="typing-text" id="typingText"></div>
+
+   <div class="robot-container" id="astroContainer">
+  <div class="typing-indicator" id="typingIndicator">🤖 Astro is typing...</div>
+  <img id="astroBot"
+       src="https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp" 
+       alt="Salesforce Robot" class="robot-avatar" />
+</div>
+
+
+  </div>
+  <!-- Existing CTA button -->
+<!-- Replace with this -->
+<button class="cta" id="yesBtn" onclick="revealMain()" style="display: none;">Yes, Let's Go!</button>
+
+</div>
+
+        <!-- Main Content -->
+        <div id="mainContent" style="display:none;">
+            <!-- Navigation Bar -->
+            <div class="navbar">
+                
+                <div class="menu">
+                    <a href="#about">About Me</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+           <!-- Profile Section (Image Left, Text Right) -->
+ <div class="intro-section">
+  <div class="profile-card">
+    <img src="https://i.postimg.cc/mknPbG7g/IMG-2966-Photoroom-2.jpg" alt="Pravalika Kethadi" />
+    <div class="profile-name">Pravalika Kethadi</div>
+    <div class="profile-title">Salesforce Developer</div>
+    <div class="profile-desc">
+      A passionate Salesforce Developer and Admin with 3+ years of experience building scalable CRM solutions.
+    </div>
+  </div>
+
+  <div class="intro-text">
+    <h1><span style="color:#00ffff;">SALESFORCE</span> <span style="color:#888">DEVELOPER</span></h1>
+    <p class="highlight">
+      Specializing in automation, optimization, and user-focused CRM experiences across Sales Cloud, Service Cloud and Experience Cloud.
+    </p>
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+            <!-- About Me Section -->
+            <div class="section hidden" id="about">
+                <h2>About Me</h2>
+                <div class="card">
+                    <p>I’m Pravalika Kethadi, a passionate Salesforce Administrator and Developer with over 3 years of hands-on experience in the Salesforce ecosystem. I specialize in building intelligent, scalable solutions that streamline operations and elevate user experience.
+
+My journey began in India, where I gained strong experience in both Salesforce administration and development. On the admin side, I’ve worked extensively with Flows, Approval Processes, Process Builder, and Workflow Rules to automate business logic. I’m well-versed in sharing and security features like role hierarchies, profiles, permission sets, OWDs, and sharing rules, as well as using Record Types, Web-to-Case, Email-to-Case, Case Assignment Rules, and Escalation Rules to drive service excellence.
+
+My technical toolkit also includes Apex Classes, Triggers, Test Classes, and Lightning Web Components (LWC) for custom development. I've built and maintained solutions across Sales Cloud, Service Cloud, and Experience Cloud (Community Cloud) environments.
+
+At the heart of it, I love solving complex CRM challenges, automating repetitive tasks, and creating Salesforce experiences that truly support business growth.</p>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="section hidden" id="certifications">
+                <h2>Certifications</h2>
+                <div class="card">
+                    <p>✅ Salesforce Certified Administrator</p>
+                    <p>✅ Salesforce Certified Platform Developer I</p>
+                </div>
+            </div>
+            <!-- Experience Section -->
+<div class="section hidden" id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <div class="card">
+      <h3>Salesforce Administrator/Developer</h3>
+      <p><strong>Jade Global Software Pvt Ltd – Hyderabad</strong></p>
+      <p><i>May 2020 – June 2023</i></p>
+      <ul>
+        <li>🔐 Managed users, roles, profiles, MFA and SSO policies</li>
+        <li>💸 Reduced license cost by 30% with better allocation</li>
+        <li>⚙️ Built automation using Flows, Process Builder, and Workflow</li>
+        <li>📈 Designed real-time dashboards for leadership</li>
+        <li>🌐 Built and deployed Experience Cloud sites</li>
+        <li>🧩 Developed LWC and Visualforce-based components</li>
+        <li>📬 Designed Marketing Cloud Journeys with 35% engagement boost</li>
+        <li>🗃️ Integrated Salesforce with SharePoint via REST APIs</li>
+        <li>🧹 Performed data deduplication and hygiene improvements</li>
+        <li>🤝 Collaborated with cross-functional teams for solution rollout</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+           <!-- Projects Section -->
+<div class="section hidden" id="projects">
+  <h2>Projects</h2>
+  <div class="card">
+    <div class="card">
+      <h3>📌 Salesforce-Based Job Search Tracker (Personal Project)</h3>
+      <p><strong>Dec 2024 – Present</strong></p>
+      <ul>
+        <li>🔍 Built a Salesforce app for job tracking and recruiter management</li>
+        <li>📬 Automated follow-up notifications and status pipelines</li>
+        <li>📊 Created dashboards to monitor success rates and interviews</li>
+        <li>📂 Added resume storage + real-time application insights</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📊 Data Science Salary Analysis (Academic Project)</h3>
+      <p><strong>Aug 2023 – Dec 2024</strong></p>
+      <ul>
+        <li>📉 Analyzed trends using Python and Tableau</li>
+        <li>🤖 Built predictive models for salary estimations</li>
+        <li>🧠 Identified in-demand tools and skills from datasets</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Salesforce Interactive Resume Portfolio (This Site)</h3>
+      <p><strong>2025 – Present</strong></p>
+      <ul>
+        <li>💡 Built inside Salesforce using Visualforce, Apex, and JavaScript</li>
+        <li>🤖 Animated Astro bot for real-time interaction</li>
+        <li>🗣️ Uses text-to-speech and responsive design for recruiters</li>
+        <li>🛠️ Includes skills, experience, certifications, and project gallery</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+            
+           <!-- Skills Section -->
+<div class="section hidden" id="skills">
+  <h2>Skills and Tools</h2>
+  <div class="card">
+    <h3>Salesforce Development</h3>
+    <p>⚙️ Apex Classes, Triggers, Web Services, Scheduler, SOQL, Visualforce, LWC, Aura</p>
+    <h3>Salesforce Admin</h3>
+    <p>🔁 Flows, Process Builder, Approval Processes, Workflow Rules, Validation Rules, Sharing Rules</p>
+    <h3>Clouds and Features</h3>
+    <p>☁️ Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Case Management, Dashboards</p>
+    <h3>Tools</h3>
+    <p>🛠️ Apex Data Loader, Force.com IDE, Excel Connector, Change Sets, Sandbox Refresh</p>
+    <h3>Languages and Tech</h3>
+    <p>💻 Apex, Java, JavaScript, SQL, HTML/CSS</p>
+    <h3>Databases</h3>
+    <p>📂 Oracle 10g/11g, SQL Server, DB2</p>
+    <h3>Methodologies</h3>
+    <p>🌀 Agile, Scrum, SDLC</p>
+  </div>
+</div>
+
+
+            <!-- Education Section -->
+            <div class="section hidden" id="education">
+                <h2>Education</h2>
+                <div class="card">
+                    <p>🎓 <b>Sacred Heart University</b> – <b>Master of Science in Business Analytics</b> (GPA: <b>3.8/4.0</b>)</p>
+                    <p>🎓 <b>Bhagwant University</b> – <b>Bachelor's in Information Technology</b> (GPA: <b>9.85/10</b>)</p>
+                </div>
+            </div>
+            <!-- Why Hire Me Section -->
+<div class="section hidden" id="why">
+  <h2>Why Hire Me?</h2>
+  <div class="card">
+    <p>✅ <strong>Certified + Proven</strong> – Hands-on experience in Salesforce Dev and Admin roles</p>
+    <p>⚙️ <strong>Automation Guru</strong> – Reduced manual efforts and boosted productivity</p>
+    <p>🎨 <strong>UI/UX Focused</strong> – Built engaging Experience Cloud and LWC solutions</p>
+    <p>🔗 <strong>Integrator</strong> – Connected Salesforce with SharePoint and external tools</p>
+    <p>🧠 <strong>Curious Learner</strong> – Always exploring new tech (AI, voice, UX)</p>
+    <p>🫶 <strong>Team Player</strong> – Great at cross-functional collaboration and user training</p>
+  </div>
+</div>
+
+
+            <!-- Contact Section -->
+            <div class="section hidden" id="contact">
+                <h2>Contact</h2>
+                <div class="card contact-card">
+  <a href="https://linkedin.com/in/pravalikakethadi" target="_blank" class="contact-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="contact-icon" />
+    LinkedIn
+  </a>
+
+  <a href="https://github.com/pravalikakethadi" target="_blank" class="contact-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-icon" />
+    GitHub
+  </a>
+
+  <a href="mailto:pravalikakethadi@gmail.com" class="contact-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="contact-icon" />
+    Email
+  </a>
+
+  <a href="tel:+14752257316" class="contact-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone" class="contact-icon" />
+    Phone
+  </a>
+</div>
+
+            </div>
+            
+        </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const text = `Hi there! 🤖 I'm Astro. Pravalika's Assistant\n\nWelcome to Pravalika Kethadi’s portfolio site. I'm here to walk you through her Salesforce journey, skills, and accomplishments.\n\nIf you're a hiring manager or recruiter, you're about to discover someone passionate, certified, and ready to innovate.\n\nReady to explore?`;
+
+  let index = 0;
+  const typingText = document.getElementById("typingText");
+  const typingIndicator = document.getElementById("typingIndicator");
+  const ctaButton = document.getElementById("yesBtn");
+  const chatBot = document.getElementById("chatBot"); 
+  const astroBot = document.getElementById("astroBot");
+  const astroContainer = document.getElementById("astroContainer");
+
+  const typingSpeed = 30;
+  let buttonShown = false;
+
+  function showCTAButton() {
+    if (!buttonShown) {
+      buttonShown = true;
+      ctaButton.style.display = "inline-block";
+    }
+  }
+
+function showChatBot() {
+  const wrapper = document.getElementById("chatBotWrapper");
+  const chatHint = document.getElementById("chatHint");
+  const astroContainer = document.getElementById("astroContainer");
+
+  if (wrapper) wrapper.style.display = "block";
+  if (chatHint) chatHint.style.display = "block";
+  if (astroContainer) astroContainer.style.display = "none";
+}
+
+
+  function type() {
+    if (index < text.length) {
+      typingText.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(type, typingSpeed);
+    } else {
+      typingIndicator.style.display = "none";
+      speakQuestion();
+      showChatBot();
+      setTimeout(() => showCTAButton(), 5000);
+    }
+  }
+
+  function speakQuestion() {
+    const question = "Do you want to explore Pravalika's portfolio?";
+    const utterance = new SpeechSynthesisUtterance(question);
+    let spoken = false;
+
+    const assignVoiceAndSpeak = () => {
+      const voices = speechSynthesis.getVoices();
+      const selected = voices.find(v => v.name.includes("Google") || v.lang.startsWith("en"));
+      if (selected) utterance.voice = selected;
+
+      if (!spoken) {
+        spoken = true;
+        speechSynthesis.speak(utterance);
+        utterance.onend = showCTAButton;
+      }
+    };
+
+    assignVoiceAndSpeak();
+    if (speechSynthesis.getVoices().length === 0) {
+      speechSynthesis.onvoiceschanged = assignVoiceAndSpeak;
+    }
+  }
+
+  ctaButton.addEventListener("click", () => {
+    document.getElementById("popSound").play();
+    speechSynthesis.speak(new SpeechSynthesisUtterance("Let's explore Pravalika's portfolio!"));
+    document.getElementById("landing").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+    window.scrollTo(0, 0);
+  });
+
+ document.getElementById("chatBotWrapper").addEventListener("click", () => {
+
+    chatBot.style.transform = "scale(1.1)";
+    setTimeout(() => chatBot.style.transform = "scale(1)", 300);
+
+    const messages = [
+      "Did you know Pravalika built this Portfolio inside Salesforce?",
+      "You're about to see some real development magic!",
+      "Click 'Yes lets go' to unlock awesome."
+    ];
+    let delay = 0;
+    for (let msg of messages) {
+      setTimeout(() => {
+        const line = new SpeechSynthesisUtterance(msg);
+        speechSynthesis.speak(line);
+      }, delay);
+      delay += 3000;
+    }
+  });
+
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  let particlesArray = [];
+  for (let i = 0; i < 80; i++) {
+    particlesArray.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 3 + 1,
+      speedX: Math.random() * 1 - 0.5,
+      speedY: Math.random() * 1 - 0.5
+    });
+  }
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particlesArray.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = "#ffffff44";
+      ctx.fill();
+      p.x += p.speedX;
+      p.y += p.speedY;
+      if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  function reveal() {
+    const elements = document.querySelectorAll('.hidden');
+    elements.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 150) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", reveal);
+  animateParticles();
+  type();
+});
+</script>
+
+    </body>
+    </html>
